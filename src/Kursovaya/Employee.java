@@ -20,7 +20,7 @@ public class Employee {
         this.employeeMiddleName = employeeMiddleName;
         this.empDepartment = empDepartment;
         this.empSalary = empSalary;
-        this.id = counter++;
+        this.id = ++counter;
     }
 
     //Геттеры сотрудника:
@@ -30,6 +30,7 @@ public class Employee {
     public int getEmpDepartment() {return empDepartment;}
     public double getEmpSalary() {return empSalary;}
     public double getSalarySum() {return salarySum;}
+    public int getId() {return id;}
 
 
     //Сеттеры отдела и зарплаты:
@@ -40,6 +41,7 @@ public class Employee {
         this.empSalary = empSalary;
     }
 
+    //Разделитель текста
     public static void delimiter() {
         System.out.println("\n xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx \n");
     }
