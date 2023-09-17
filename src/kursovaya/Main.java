@@ -1,4 +1,4 @@
-package Kursovaya;
+package kursovaya;
 
 import java.util.Arrays;
 
@@ -82,7 +82,7 @@ public class Main {
 
         //b) Сотрудники с зарплатой больше заданного числа
         System.out.println("Сотрудники с зарплатой больше заданного числа:");
-        Methods.salaryMoreThan(employees, 70000);
+        Methods.salaryMoreThan(employees, 52000);
         Employee.delimiter();
     }
 }

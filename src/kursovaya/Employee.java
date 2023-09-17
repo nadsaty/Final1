@@ -1,4 +1,4 @@
-package Kursovaya;
+package kursovaya;
 public class Employee {
 
 
@@ -55,55 +55,50 @@ public class Employee {
     }
 
     //2.Получить сумму затрат на зарплаты за месяц:
-    public static double salarySum(Employee[] o) {
+    public static double salarySum(Employee[] salary) {
         double salarySum = 0;
-        Employee[] employees = (Employee[]) o;
-        for (Employee element : employees) {
+        for (Employee element : salary) {
             salarySum += element.empSalary;
         }
         return salarySum;
     }
 
     //3.Получить сотрудника с минимальной зарплатой:
-    public static Employee salaryMin(Employee[] o) {
-        Employee[] employees = (Employee[]) o;
-        Employee salaryMin = employees[0];
-        for (int i = 1; i < employees.length; i++) {
-            if (employees[i].getEmpSalary() < salaryMin.empSalary) {
-                salaryMin = employees[i];
+    public static Employee salaryMin(Employee[] salary) {
+        Employee salaryMin = salary[0];
+        for (int i = 1; i < salary.length; i++) {
+            if (salary[i].getEmpSalary() < salaryMin.empSalary) {
+                salaryMin = salary[i];
             }
         }
         return salaryMin;
     }
 
     //4.Получить сотрудника с максимальной зарплатой:
-    public static Employee salaryMax(Employee[] o) {
-        Employee[] employees = (Employee[]) o;
-        Employee salaryMax = employees[0];
-        for (int i = 1; i < employees.length; i++) {
-            if (employees[i].getEmpSalary() > salaryMax.empSalary) {
-                salaryMax = employees[i];
+    public static Employee salaryMax(Employee[] salary) {
+        Employee salaryMax = salary[0];
+        for (int i = 1; i < salary.length; i++) {
+            if (salary[i].getEmpSalary() > salaryMax.empSalary) {
+                salaryMax = salary[i];
             }
         }
         return salaryMax;
     }
 
     //5.Получить среднее значение зарплат за месяц:
-    public static double salaryAverage(Employee[] o) {
+    public static double salaryAverage(Employee[] salary) {
         double salaryAverage = 0;
         double averageSalary = 0;
-        Employee[] employees = (Employee[]) o;
-        for (Employee element : employees) {
-            averageSalary = (salaryAverage += element.empSalary) / employees.length;
+        for (Employee element : salary) {
+            averageSalary = (salaryAverage += element.empSalary) / salary.length;
         }
         return averageSalary;
     }
 
     //6.Получить ФИО всех сотрудников:
-    public static void employeeNames(Employee[] o) {
+    public static void employeeNames(Employee[] salary) {
         String employeeNames = null;
-        Employee[] employees = (Employee[]) o;
-        for (Employee element : employees) {
+        for (Employee element : salary) {
             employeeNames = element.employeeLastName + " " + element.employeeFirstName + " " + element.employeeMiddleName + " ";
             System.out.println(employeeNames);
         }
